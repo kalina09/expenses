@@ -14,7 +14,7 @@ const DUMMY_EXPENSES = [
     id: "e2",
     title: "Christmas presents",
     amount: 196.12,
-    date: new Date(2020, 12, 21),
+    date: new Date(2020, 11, 21),
   },
   { id: "e3", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
   {
@@ -39,13 +39,19 @@ const DUMMY_EXPENSES = [
     id: "e7",
     title: "Holiday in Greece",
     amount: 1024.83,
-    date: new Date(2022, 6, 23),
+    date: new Date(2022, 7, 23),
   },
   {
     id: "e8",
+    title: "Versace Parfume",
+    amount: 129.99,
+    date: new Date(2022, 8, 15),
+  },
+  {
+    id: "e9",
     title: "Kitchen supplies",
-    amount: 126.18,
-    date: new Date(2022, 9, 5),
+    amount: 226.18,
+    date: new Date(2022, 10, 5),
   },
 ];
 
