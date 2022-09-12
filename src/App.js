@@ -6,22 +6,46 @@ import Expenses from "./components/Expenses/Expenses";
 const DUMMY_EXPENSES = [
   {
     id: "e1",
-    title: "Toilet Paper",
-    amount: 94.12,
-    date: new Date(2020, 7, 14),
+    title: "Headphones",
+    amount: 149.99,
+    date: new Date(2020, 3, 9),
   },
-  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
   {
-    id: "e3",
+    id: "e2",
+    title: "Christmas presents",
+    amount: 196.12,
+    date: new Date(2020, 12, 21),
+  },
+  { id: "e3", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+  {
+    id: "e4",
     title: "Car Insurance",
     amount: 294.67,
     date: new Date(2021, 2, 28),
   },
   {
-    id: "e4",
+    id: "e5",
     title: "New Desk (Wooden)",
     amount: 450,
     date: new Date(2021, 5, 12),
+  },
+  {
+    id: "e6",
+    title: "New Laptop",
+    amount: 680.99,
+    date: new Date(2022, 2, 10),
+  },
+  {
+    id: "e7",
+    title: "Holiday in Greece",
+    amount: 1024.83,
+    date: new Date(2022, 6, 23),
+  },
+  {
+    id: "e8",
+    title: "Kitchen supplies",
+    amount: 126.18,
+    date: new Date(2022, 9, 5),
   },
 ];
 
@@ -29,7 +53,6 @@ const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expense) => {
-    // the correct way of updating the state:
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
@@ -39,13 +62,8 @@ const App = () => {
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
-      {/* items={expenses} thats how we pass the props to the Expenses function */}
     </div>
   );
 };
 
 export default App;
-
-// useState always returns an array with two elements:
-// the first one is the current state value
-// the second is a function for updating the value

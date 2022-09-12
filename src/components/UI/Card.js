@@ -8,6 +8,4 @@ const Card = (props) => {
   return <div className={classes}>{props.children}</div>;
 };
 
-//.children is build into react
-
 export default Card;
